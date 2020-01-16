@@ -1,0 +1,64 @@
+.nav-bar {
+  width: 100%;
+  background-color: #2f4050;
+  height: 100% !important;
+}
+
+.nav-bar-item {
+  padding: 14px 20px 14px 25px;
+  color: rgb(167, 177, 194);
+  font-size: 15px;
+  font-weight: 650px !important;
+  text-decoration: none;
+}
+
+/* .nav-bar-item span {
+  font-size: 13px;
+  margin-right: 10px;
+} */
+
+.nav-bar-item:hover {
+  background-color: rgb(38, 57, 73);
+  color: white;
+  cursor: pointer;
+}
+/* 
+.nav-bar-item span:hover {
+  color: white;
+} */
+
+.nav-bar-li {
+  padding: 14px 20px 0px 25px;
+}
+
+img {
+  width: 100%;
+}
+
+.flex-column a:hover {
+  text-decoration: none;
+}
+
+/* .flex-column .active {
+  background-color: red;
+} */
+/* 
+.selected { 
+  color: yellow;
+} */
+
+.selected {
+  color: yellow !important;
+}
+
+@media only screen and (max-width: 1259px) {
+  .nav-bar {
+    width: 4.5em;
+  }
+  .nav-bar-item {
+    display: none;
+  }
+  img {
+    display: none;
+  }
+}

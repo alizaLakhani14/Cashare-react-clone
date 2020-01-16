@@ -1,0 +1,22 @@
+.auto-invest-faq {
+  border-top: 3px solid #dfdfdf !important;
+  width: 44.5%;
+}
+
+.auto-invest-title {
+  padding: 1em;
+  color: #676a6c;
+  border-bottom: 0.5px solid #dfdfdf;
+}
+
+.collapse {
+  padding: 1em;
+}
+
+@media only screen and (max-width: 1500px) {
+  .auto-invest-faq {
+    margin-top: 2em;
+    margin-left: 0;
+    width: 92%;
+  }
+}

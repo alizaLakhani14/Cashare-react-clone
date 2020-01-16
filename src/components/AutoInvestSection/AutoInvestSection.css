@@ -1,0 +1,30 @@
+.row-1 {
+  width: 100%;
+  background-color: white;
+  margin: 0;
+  padding: 0.75em 0px 0.75em 1.5em;
+  border-top: 0.5px solid #8080808c;
+  border-bottom: 0.5px solid #8080808c;
+}
+
+.auto-invest-heading {
+  color: #676a6c;
+  font-weight: 300;
+  font-size: 27px;
+  margin-bottom: 8px;
+}
+.breadcrumb {
+  background-color: white !important;
+  padding: 0px !important;
+  margin: 0 !important;
+  margin-bottom: 8px !important;
+}
+
+.active-state {
+  font-weight: bold;
+}
+
+.breadcrumb > * {
+  color: #676a6c;
+}
+

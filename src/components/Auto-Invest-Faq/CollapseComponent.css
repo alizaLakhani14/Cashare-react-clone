@@ -1,0 +1,41 @@
+.collapse-card {
+  border-left: none !important;
+  border-right: none !important;
+  border-bottom: none !important;
+  border-top: 1px solid #dfdfdf !important;
+  width: 200px;
+  border-radius: 0 !important;
+  width: 100%;
+}
+
+.collapse-card-text {
+  padding: 1em 0em 0 1em;
+  color: #676a6c;
+  display: flex;
+  justify-content: space-between;
+  font-weight: 600;
+}
+
+.description-div {
+  width: 700px;
+  color: #676a6c;
+}
+
+.collapse-card-text:hover {
+  color: #3a779a;
+  cursor: text;
+}
+
+.collapse-component-icon:hover {
+  color: #3a779a;
+  cursor: text;
+}
+
+.collapse-component {
+  padding: 0 !important;
+}
+
+.collapse-component-div {
+  padding: 0 1em 1em 1em;
+  color: #676a6c;
+}

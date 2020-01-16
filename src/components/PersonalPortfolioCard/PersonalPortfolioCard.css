@@ -1,0 +1,44 @@
+.portfolio-card {
+  border-top: 3px solid #dfdfdf !important;
+  margin-top: 1.5em;
+  /* width: 735px; */
+}
+
+.portfolio-parent-div {
+  padding: 15px;
+}
+
+.portfolio-list {
+  display: flex;
+  list-style-type: none;
+  padding-bottom: 5px;
+  margin: 0;
+  border-bottom: 0.5px solid #dfdfdf;
+}
+
+.list-item {
+  margin-right: 8%;
+  font-weight: 600;
+  color: #676a6c;
+}
+
+.single-portfolio {
+  display: flex;
+  list-style: none;
+}
+
+.single-portfolio-list-item {
+  margin-right: 8%;
+}
+
+thead > * {
+  font-weight: 600;
+  color: #676a6c;
+}
+
+
+@media only screen and (max-width: 445px) {
+ /* thead > tr td{
+   font-size: 10px;
+ } */
+}
