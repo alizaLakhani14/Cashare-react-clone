@@ -9,6 +9,9 @@
   color: #676a6c;
   border-bottom: 0.5px solid #dfdfdf;
 }
+.create-auto-invest-title{
+margin-bottom: 0 !important;
+}
 
 .create-auto-invest-text {
   padding: 0.5em 1em;

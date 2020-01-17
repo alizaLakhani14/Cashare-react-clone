@@ -1,6 +1,6 @@
 input[type="checkbox"] {
-  width: 69px;
-  height: 25px;
+  width: 52px;
+  height: 22px;
   background-color: #3a789b;
   cursor: pointer;
   -webkit-appearance: none;
@@ -17,10 +17,10 @@ input:checked[type="checkbox"] {
 input[type="checkbox"]::before {
   position: absolute;
   content: "";
-  left: 35px;
-  width: 30px;
+  left: 27px;
+  width: 22px;
   top: 0px;
-  height: 22px;
+  height: 18px;
   background-color: white;
   z-index: 100;
   border-radius: 3px;
@@ -34,7 +34,7 @@ input[type="checkbox"]:checked::before {
   border-bottom: 2px solid #3a789b;
   border-left: none;
   top: -1px;
-  height: 23px;
+  height: 21px;
 }
 
 .switch-container {
@@ -52,10 +52,7 @@ input[type="checkbox"]:checked::before {
 .off {
   position: absolute;
   top: 0px;
-  left: 40px;
+  left: 30px;
   color: rgb(103, 106, 108);
 }
 
-/* .switch-container {
-  display: inline-block;
-} */

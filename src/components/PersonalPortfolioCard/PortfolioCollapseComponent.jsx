@@ -38,12 +38,14 @@ const PortfolioCollapseComponent = ({ content }) => {
         <td className="collapse-td collapse-td-switch" style={{ width: "35%" }}>
           <Switch />
           {/* <span style={{ marginLeft: "8px", marginBottom: "7px" }}> */}
-          <span className="edit-icon-span">
-            <FontAwesomeIcon icon={faEdit} />
-          </span>
-          <span className="trash-icon-span">
-            <FontAwesomeIcon icon={faTrashAlt} />
-          </span>
+          <div style={{ display: "flex" }}>
+            <span className="edit-icon-span">
+              <FontAwesomeIcon icon={faEdit} />
+            </span>
+            <span className="trash-icon-span">
+              <FontAwesomeIcon icon={faTrashAlt} />
+            </span>
+          </div>
         </td>
       </tr>
       <Collapse isOpen={isOpen} className="personal-portfolio-collapse">

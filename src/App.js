@@ -1,6 +1,6 @@
 import React from "react";
 import "./App.css";
-import { Container } from "reactstrap";
+import { Container, Row, Col } from "reactstrap";
 import Header from "./components/Header/Header.jsx";
 import AutoInvestSection from "./components/AutoInvestSection/AutoInvestSection";
 import CreateAutoInvest from "./components/CreateAutoInvest/CreateAutoInvest";
@@ -34,16 +34,19 @@ function App(props) {
           {" "}
           <Header />
           <AutoInvestSection />
-          <div className="abc">
+          <div className="column">
             <Description />
-            <div className="row2">
-              <div className="column-2">
+            <Row style={{ marginTop: "2em", width:'100%' }}>
+              <Col md="6" sm="12" xs="12">
                 <CreateAutoInvest />
                 <PersonalPortfolioCard />
-              </div>
-              <AutoInvestFaq />
-            </div>
+              </Col>
+              <Col md="6" sm="12" x="12">
+                <AutoInvestFaq />
+              </Col>
+            </Row>
           </div>
+          <footer>Copyright 2008-2020 Cashare AG</footer>
         </div>
       </Container>
     </BrowserRouter>

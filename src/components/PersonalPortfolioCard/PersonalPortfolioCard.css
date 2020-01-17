@@ -35,10 +35,12 @@ thead > * {
   font-weight: 600;
   color: #676a6c;
 }
-
+td {
+  font-size: 13px;
+}
 
 @media only screen and (max-width: 445px) {
- /* thead > tr td{
+  /* thead > tr td{
    font-size: 10px;
  } */
 }

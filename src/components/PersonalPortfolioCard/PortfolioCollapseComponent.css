@@ -4,7 +4,7 @@
 }
 
 .portfolio-collapse-icon {
-  margin-right: 5px;
+  margin-right: 2px;
   font-size: smaller;
   font-weight: 300 !important;
 }
@@ -31,4 +31,15 @@
 .portfolio-list-item-span {
   color: #676a6c;
   font-weight: 600;
+}
+
+@media only screen and (max-width: 974px) {
+  .collapse-td-switch {
+    flex-direction: column;
+    margin-right: 3px;
+  }
+  .edit-icon-span,
+.trash-icon-span {
+  margin: 0;
+}
 }

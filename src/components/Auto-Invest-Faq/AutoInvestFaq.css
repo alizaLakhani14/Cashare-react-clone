@@ -1,6 +1,7 @@
 .auto-invest-faq {
   border-top: 3px solid #dfdfdf !important;
-  width: 44.5%;
+  width: 100%;
+  margin-left: 1%;
 }
 
 .auto-invest-title {
@@ -13,10 +14,9 @@
   padding: 1em;
 }
 
-@media only screen and (max-width: 1500px) {
+@media only screen and (max-width: 768px) {
   .auto-invest-faq {
-    margin-top: 2em;
     margin-left: 0;
-    width: 92%;
+    margin-top: 1em;
   }
 }

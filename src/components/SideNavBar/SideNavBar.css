@@ -47,18 +47,36 @@ img {
   color: yellow;
 } */
 
+.small-logo {
+  display: none;
+}
 .selected {
   color: yellow !important;
 }
 
 @media only screen and (max-width: 1259px) {
   .nav-bar {
-    width: 4.5em;
+    width: 100%;
   }
-  .nav-bar-item {
+  /* .nav-bar-item {
+    display: none;
+  } */
+  img {
     display: none;
   }
-  img {
+  .small-logo {
+    display: block;
+  }
+  .side-nav-bar-icon {
+    font-size: 1em;
+  }
+  .side-bar-nav-item {
+    display: none;
+  }
+}
+
+@media only screen and (max-width: 782px) {
+  .nav-bar {
     display: none;
   }
 }

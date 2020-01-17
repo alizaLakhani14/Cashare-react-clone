@@ -1,10 +1,8 @@
 .row-2 {
-  width: 92%;
+  width: 98%;
   background-color: white;
-  margin: 0;
   border-top: 0.5px solid #8080808c;
   text-align: center;
-  margin: 2.5em auto;
   padding: 10px;
   display: flex;
   flex-direction: column;
@@ -14,11 +12,11 @@
 .loan-portfolio-heading {
   color: #676a6c;
   font-weight: 100;
-  font-size: 1.75em;
+  font-size: 1.5em;
 }
 
 .description {
-  margin: 5px;
-  font-size: 1em;
+  margin: 2px;
+  font-size: 13px;
   color: #676a6c;
 }

@@ -17,12 +17,12 @@ const NavBarDropdown = props => {
     <>
       <div onClick={toggle} className="nav-bar-dropdown-conatainer">
         <div className="icon-name">
-          <span>
+          <span class="nav-bar-dropdown-icon">
             <FontAwesomeIcon icon={props.icon} />
           </span>
-          {props.name}
+          <span className="nav-dropdown-item">{props.name}</span>
         </div>
-        <div>
+        <div className='dropdown-nav-bar'>
           {isOpen === true ? (
             <FontAwesomeIcon
               icon={faChevronDown}

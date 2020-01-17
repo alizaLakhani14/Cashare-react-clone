@@ -33,3 +33,20 @@ ul {
 .nav-bar-dropdown-list {
   padding: 0;
 }
+
+@media only screen and (max-width: 1259px) {
+  .nav-bar-dropdown-icon {
+    font-size: 1em;
+  }
+  .nav-dropdown-item {
+    display: none;
+  }
+
+  .dropdown-nav-bar {
+    display: none;
+  }
+
+  .nav-bar-collapse {
+    display: none;
+  }
+}

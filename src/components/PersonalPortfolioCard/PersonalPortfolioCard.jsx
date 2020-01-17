@@ -83,7 +83,7 @@ const PersonalPortfolioCard = () => {
           Your personal Auto-Invest Portfolios
         </CardTitle>
         <div className="portfolio-parent-div">
-          <Table striped responsive={true}>
+          <Table striped responsive>
             <thead>
               <tr>
                 <td>Name of the portfolio</td>
