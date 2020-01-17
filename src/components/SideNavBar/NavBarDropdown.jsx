@@ -17,24 +17,40 @@ const NavBarDropdown = props => {
     <>
       <div onClick={toggle} className="nav-bar-dropdown-conatainer">
         <div className="icon-name">
-          <span class="nav-bar-dropdown-icon">
+          <span
+            className={
+              props.sideBarOpen === true
+                ? "nav-dropdown-icon"
+                : "nav-dropdown-icon-collapse"
+            }
+          >
             <FontAwesomeIcon icon={props.icon} />
           </span>
-          <span className="nav-dropdown-item">{props.name}</span>
+          <span
+            className={
+              props.sideBarOpen === true
+                ? "nav-dropdown-item"
+                : "nav-dropdown-item-collapse"
+            }
+          >
+            {props.name}
+          </span>
         </div>
-        <div className='dropdown-nav-bar'>
-          {isOpen === true ? (
-            <FontAwesomeIcon
-              icon={faChevronDown}
-              className="nav-bar-collapse-icon"
-            />
-          ) : (
-            <FontAwesomeIcon
-              icon={faChevronLeft}
-              className="nav-bar-collapse-icon"
-            />
-          )}
-        </div>
+        {props.sideBarOpen === true && (
+          <div className="dropdown-nav-bar">
+            {isOpen === true ? (
+              <FontAwesomeIcon
+                icon={faChevronDown}
+                className="nav-bar-collapse-icon"
+              />
+            ) : (
+              <FontAwesomeIcon
+                icon={faChevronLeft}
+                className="nav-bar-collapse-icon"
+              />
+            )}
+          </div>
+        )}
       </div>
       <Collapse isOpen={isOpen} className="nav-bar-collapse">
         <ul className="nav-bar-dropdown-list">{props.children}</ul>

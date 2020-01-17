@@ -31,6 +31,13 @@
 .portfolio-list-item-span {
   color: #676a6c;
   font-weight: 600;
+  margin-right: 3px !important;
+}
+
+.portfolio-list-item-span-2 {
+  color: #676a6c;
+  font-size: 13px;
+  margin-right: 0 !important;
 }
 
 @media only screen and (max-width: 974px) {
@@ -39,7 +46,7 @@
     margin-right: 3px;
   }
   .edit-icon-span,
-.trash-icon-span {
-  margin: 0;
-}
+  .trash-icon-span {
+    margin: 0;
+  }
 }

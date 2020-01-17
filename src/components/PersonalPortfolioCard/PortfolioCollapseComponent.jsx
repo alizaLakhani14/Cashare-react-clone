@@ -28,7 +28,6 @@ const PortfolioCollapseComponent = ({ content }) => {
           </span>
           {content.name}
         </td>
-        {/* <td>testing 106</td> */}
         <td className="collapse-td" style={{ width: "20%" }}>
           {content.size}
         </td>
@@ -52,25 +51,33 @@ const PortfolioCollapseComponent = ({ content }) => {
         <ul className="portfolio-collapse-ul">
           <li>
             <span className="portfolio-list-item-span">Loan type(s):</span>
-            {content.LoanType}
+            <span className="portfolio-list-item-span-2">
+              {content.LoanType}
+            </span>
           </li>
           <li>
             <span className="portfolio-list-item-span">Collateral:</span>
-            {content.Collateral}
+            <span className="portfolio-list-item-span-2">
+              {content.Collateral}
+            </span>
           </li>
           <li>
             <span className="portfolio-list-item-span">Rating:</span>
-            {content.Rating}
+            <span className="portfolio-list-item-span-2">{content.Rating}</span>
           </li>
           <li>
             <span className="portfolio-list-item-span">Loan Term:</span>
-            {content.LoanTerm}
+            <span className="portfolio-list-item-span-2">
+              {content.LoanTerm}
+            </span>
           </li>
           <li>
             <span className="portfolio-list-item-span">
               Investing amount per loan:
             </span>
-            {content.InvestingAmount}
+            <span className="portfolio-list-item-span-2">
+              {content.InvestingAmount}
+            </span>
           </li>
         </ul>
       </Collapse>

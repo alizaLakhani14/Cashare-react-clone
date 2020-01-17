@@ -17,85 +17,133 @@ import {
 import NavBarDropdown from "./NavBarDropdown";
 import { NavLink as Abc } from "react-router-dom";
 
-const SideNavBar = () => {
+const SideNavBar = ({ sideBarOpen }) => {
   const url = window.location.href;
-
-  console.log(url);
+  console.log(sideBarOpen);
   return (
     <div className="nav-bar">
-      <img src={Logo} alt="logo" />
-      <img src={Small} alt="small-logo" className="small-logo" />
+      <img
+        src={Logo}
+        alt="logo"
+        className={sideBarOpen === true ? "logo-visible" : "logo-hidden"}
+      />
+
+      <img
+        src={Small}
+        alt="small-logo"
+        className={sideBarOpen === true ? "small-logo" : "small-logo-visible"}
+      />
+
       <Nav vertical>
         <NavItem className="nav-bar-item">
           <span className="side-nav-bar-icon">
             <FontAwesomeIcon icon={faThLarge} />
           </span>
-          <span className="side-bar-nav-item"> Dashboard</span>
+          <span
+            className={
+              sideBarOpen === true
+                ? "side-bar-nav-item"
+                : "side-bar-nav-item-collapse"
+            }
+          >
+            {" "}
+            Dashboard
+          </span>
         </NavItem>
 
-        <Abc className="ae" to="/creditProjects">
-          <NavItem className="nav-bar-item">
-            <NavBarDropdown icon={faList} name="Credit Projects">
-              <li className="nav-bar-li">Primary market</li>
-              <li className="nav-bar-li">Secondary market</li>
-            </NavBarDropdown>
-          </NavItem>
-        </Abc>
+        <NavItem className="nav-bar-item">
+          <NavBarDropdown
+            icon={faList}
+            name="Credit Projects"
+            sideBarOpen={sideBarOpen}
+          >
+            <li className="nav-bar-li">Primary market</li>
+            <li className="nav-bar-li">Secondary market</li>
+          </NavBarDropdown>
+        </NavItem>
 
-        <Abc to="/">
-          <NavItem className="nav-bar-item" active={url === "/"}>
-            <span className="side-nav-bar-icon">
-              <FontAwesomeIcon icon={faChartBar} />
-            </span>
-            <span className="side-bar-nav-item">Auto-Invest</span>
-          </NavItem>
-        </Abc>
+        <NavItem className="nav-bar-item" active={url === "/"}>
+          <span className="side-nav-bar-icon">
+            <FontAwesomeIcon icon={faChartBar} />
+          </span>
+          <span
+            className={
+              sideBarOpen === true
+                ? "side-bar-nav-item"
+                : "side-bar-nav-item-collapse"
+            }
+          >
+            Auto-Invest
+          </span>
+        </NavItem>
 
-        <Abc to="/loanAgreements">
-          <NavItem className="nav-bar-item" active={url === "/loanAgreements"}>
-            <NavBarDropdown icon={faNewspaper} name="Loan agreements">
-              <li className="nav-bar-li">Contracts in preparation</li>
-              <li className="nav-bar-li">All contracts</li>
-            </NavBarDropdown>
-          </NavItem>
-        </Abc>
+        <NavItem className="nav-bar-item" active={url === "/loanAgreements"}>
+          <NavBarDropdown
+            icon={faNewspaper}
+            name="Loan agreements"
+            sideBarOpen={sideBarOpen}
+          >
+            <li className="nav-bar-li">Contracts in preparation</li>
+            <li className="nav-bar-li">All contracts</li>
+          </NavBarDropdown>
+        </NavItem>
 
-        <Abc to="/myBids">
-          <NavItem className="nav-bar-item" active={url === "/myBids"}>
-            <span className="side-nav-bar-icon">
-              <FontAwesomeIcon icon={faChartLine} />
-            </span>
+        <NavItem className="nav-bar-item" active={url === "/myBids"}>
+          <span className="side-nav-bar-icon">
+            <FontAwesomeIcon icon={faChartLine} />
+          </span>
 
-            <span className="side-bar-nav-item">My bids</span>
-          </NavItem>
-        </Abc>
+          <span
+            className={
+              sideBarOpen === true
+                ? "side-bar-nav-item"
+                : "side-bar-nav-item-collapse"
+            }
+          >
+            My bids
+          </span>
+        </NavItem>
 
-        <Abc to="/invoices">
-          <NavItem className="nav-bar-item" active={url === "/invoices"}>
-            <NavBarDropdown icon={faFile} name="Invoices">
-              <li className="nav-bar-li">Unpaid invoices</li>
-              <li className="nav-bar-li">Paid invoices</li>
-            </NavBarDropdown>
-          </NavItem>
-        </Abc>
+        <NavItem className="nav-bar-item" active={url === "/invoices"}>
+          <NavBarDropdown
+            icon={faFile}
+            name="Invoices"
+            sideBarOpen={sideBarOpen}
+          >
+            <li className="nav-bar-li">Unpaid invoices</li>
+            <li className="nav-bar-li">Paid invoices</li>
+          </NavBarDropdown>
+        </NavItem>
 
-        <Abc to="/notifications">
-          <NavItem className="nav-bar-item" active={url === "/notifications"}>
-            <span className="side-nav-bar-icon">
-              <FontAwesomeIcon icon={faBell} />
-            </span>
-            <span className="side-bar-nav-item">Notifications</span>
-          </NavItem>
-        </Abc>
+        <NavItem className="nav-bar-item" active={url === "/notifications"}>
+          <span className="side-nav-bar-icon">
+            <FontAwesomeIcon icon={faBell} />
+          </span>
+          <span
+            className={
+              sideBarOpen === true
+                ? "side-bar-nav-item"
+                : "side-bar-nav-item-collapse"
+            }
+          >
+            Notifications
+          </span>
+        </NavItem>
 
-        <Abc to="/support">
-          <NavItem className="nav-bar-item" active={url === "/support"}>
-            <span className="side-nav-bar-icon">
-              <FontAwesomeIcon icon={faLifeRing} />
-            </span>
-            <span className="side-bar-nav-item">Support</span>
-          </NavItem>
-        </Abc>
+        <NavItem className="nav-bar-item" active={url === "/support"}>
+          <span className="side-nav-bar-icon">
+            <FontAwesomeIcon icon={faLifeRing} />
+          </span>
+          <span
+            className={
+              sideBarOpen === true
+                ? "side-bar-nav-item"
+                : "side-bar-nav-item-collapse"
+            }
+          >
+            Support
+          </span>
+        </NavItem>
       </Nav>
     </div>
   );

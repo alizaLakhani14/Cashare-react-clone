@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useState } from "react";
 import {
   Button,
   UncontrolledDropdown,
@@ -15,11 +15,23 @@ import {
   faSignOutAlt
 } from "@fortawesome/free-solid-svg-icons";
 
-const Header = () => {
+const Header = ({ handleToggle }) => {
+  const [isOpen, setIsOpen] = React.useState(false);
+
+  const toggle = () => {
+    setIsOpen(!isOpen);
+  };
+
   return (
     <div className="header">
       <div className="header-button">
-        <Button className="btn-secondary">
+        <Button
+          className="btn-secondary"
+          onClick={() => {
+            handleToggle(!isOpen);
+            toggle();
+          }}
+        >
           <FontAwesomeIcon icon={faBars} />
         </Button>
       </div>

@@ -1,5 +1,6 @@
 import React from "react";
 import "./Description.css";
+import { Row, Col } from "reactstrap";
 
 const Description = () => {
   return (

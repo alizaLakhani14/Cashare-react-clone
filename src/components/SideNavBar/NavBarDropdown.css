@@ -4,7 +4,6 @@ span {
 }
 
 .nav-bar-collapse-icon {
-  /* margin-left: 50px; */
   font-size: 11px;
   margin-bottom: 2px;
 }
@@ -16,6 +15,9 @@ span {
 
 .nav-bar-collapse {
   padding: 0;
+}
+.nav-dropdown-item {
+  font-weight: bold;
 }
 
 ul {
@@ -33,6 +35,13 @@ ul {
 .nav-bar-dropdown-list {
   padding: 0;
 }
+.nav-dropdown-item-collapse {
+  display: none;
+}
+
+.nav-dropdown-icon-collapse {
+  font-size: 1em;
+}
 
 @media only screen and (max-width: 1259px) {
   .nav-bar-dropdown-icon {
@@ -48,5 +57,8 @@ ul {
 
   .nav-bar-collapse {
     display: none;
+  }
+  .nav-dropdown-icon{
+    margin: 0;
   }
 }

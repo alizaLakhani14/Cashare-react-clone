@@ -11,6 +11,14 @@
   padding: 0 !important;
 }
 
+.navbarCollapse {
+  width: 4.5%;
+}
+.aside-collapse {
+  width: calc(100% - 4.5%);
+  background-color: #f3f3f4;
+}
+
 .aside {
   width: calc(100% - 15%);
   background-color: #f3f3f4;
@@ -28,7 +36,6 @@
 }
 
 .main {
-  /* display: flex !important; */
   margin-top: 1.5em !important;
 }
 
@@ -46,7 +53,7 @@ footer {
   font-size: 13px;
 }
 
-@media only screen and (max-width: 1259px) {
+@media only screen and (max-width: 1259px) and (min-width: 767px) {
   .navbar {
     width: 6%;
   }
@@ -54,12 +61,58 @@ footer {
     width: calc(100% - 6%);
   }
 }
-
-@media only screen and (max-width: 782px) {
-  .navbar {
+/* @media only screen and (max-width: 782px) {
+   .navbar {
     width: 0;
-  }
+  } 
   .aside {
     width: 100%;
   }
+}  */
+
+@media only screen and (max-width: 1024px) {
+  .navbarCollapse {
+    width: 0;
+  }
+  .aside-collapse {
+    width: 100%;
+  }
 }
+
+@media only screen and (max-width: 768px) {
+  .navbar {
+    width: 9%;
+  }
+  .aside {
+    width: calc(100% - 9%);
+  }
+}
+
+@media only screen and (max-width: 425px) {
+  .navbar {
+    width: 12%;
+  }
+  .aside {
+    width: calc(100% - 12%);
+  }
+}
+
+@media only screen and (max-width: 320px) {
+  .navbar {
+    width: 16%;
+  }
+  .aside {
+    width: calc(100% - 14%);
+  }
+}
+/* @media only screen and (max-width: 425px) and (min-width: 374px) {
+  .navbar {
+    width: 15%;
+  }
+}
+
+@media only screen and (max-width: 375px) {
+  .navbar {
+    width: 25%;
+  }
+} */
