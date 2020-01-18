@@ -12,7 +12,8 @@ import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import {
   faBars,
   faBell,
-  faSignOutAlt
+  faSignOutAlt,
+  faUserAlt
 } from "@fortawesome/free-solid-svg-icons";
 
 const Header = ({ handleToggle }) => {
@@ -35,28 +36,49 @@ const Header = ({ handleToggle }) => {
           <FontAwesomeIcon icon={faBars} />
         </Button>
       </div>
-      <div className="header-section-2">
-        <UncontrolledDropdown>
-          <DropdownToggle caret>c2091</DropdownToggle>
-          <DropdownMenu right={true}>
-            <DropdownItem>User Data</DropdownItem>
-            <DropdownItem>Documents</DropdownItem>
-            <DropdownItem divider></DropdownItem>
-            <DropdownItem>Logout</DropdownItem>
-          </DropdownMenu>
-        </UncontrolledDropdown>
-        <Button color="link" className="notification-button">
-          <FontAwesomeIcon icon={faBell} className="bell-icon" />
-          <Badge color="danger" className="notification-badge">
-            0
-          </Badge>
-        </Button>
-        <Button color="link" className="logout-btn">
-          {" "}
-          <FontAwesomeIcon icon={faSignOutAlt} className="signout-icon" />
-          Logout
-        </Button>
-      </div>
+      <nav className="header-nav">
+        <ul className="header-nav-list">
+          <li className="dropdown-list-item">
+            <UncontrolledDropdown>
+              <DropdownToggle caret>c2091</DropdownToggle>
+              <DropdownMenu right={true}>
+                <DropdownItem>User Data</DropdownItem>
+                <DropdownItem>Documents</DropdownItem>
+                <DropdownItem divider></DropdownItem>
+                <DropdownItem>Logout</DropdownItem>
+              </DropdownMenu>
+            </UncontrolledDropdown>
+          </li>
+          <li>
+            <Button color="link" className="notification-button">
+              <FontAwesomeIcon icon={faBell} className="bell-icon" />
+              <Badge color="danger" className="notification-badge">
+                0
+              </Badge>
+            </Button>
+          </li>
+          <li className="user-list-item">
+            <UncontrolledDropdown>
+              <DropdownToggle color="link" className="user-icon-button">
+                <FontAwesomeIcon icon={faUserAlt} className="user-icon" />
+              </DropdownToggle>
+              <DropdownMenu right={true}>
+                <DropdownItem>User Data</DropdownItem>
+                <DropdownItem>Documents</DropdownItem>
+                <DropdownItem divider></DropdownItem>
+                <DropdownItem>Logout</DropdownItem>
+              </DropdownMenu>
+            </UncontrolledDropdown>
+          </li>
+          <li>
+            <Button color="link" className="logout-btn">
+              {" "}
+              <FontAwesomeIcon icon={faSignOutAlt} className="signout-icon" />
+              Logout
+            </Button>
+          </li>
+        </ul>
+      </nav>
     </div>
   );
 };

@@ -28,7 +28,12 @@ function App(props) {
         <Header handleToggle={toggle} />
         <AutoInvestSection />
         <div className="column">
-          <Description />
+          <Row style={{width:'100%'}}>
+            <Col md='12' sm='12' xs='12'>
+              <Description />
+            </Col>
+          </Row>
+
           <Row style={{ marginTop: "2em", width: "100%" }}>
             <Col md="6" sm="12" xs="12">
               <CreateAutoInvest />

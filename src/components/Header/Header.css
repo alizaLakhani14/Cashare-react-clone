@@ -10,18 +10,10 @@
   margin: 1em;
 }
 
-.header-section-2 {
-  display: flex;
-  justify-content: space-around;
-}
-
-.header-section-2 > * {
-  margin: 5px;
-}
-
 .notification-button {
   position: relative;
-  padding: 2px;
+  padding: 0px !important;
+  margin-left: 18px;
 }
 .btn .badge {
   top: -11px !important;
@@ -41,8 +33,46 @@
   color: #999c9e !important;
   font-weight: bold !important;
   text-decoration: none !important;
+  padding: 0px !important;
 }
 
 .logout-btn:hover {
   text-decoration: none !important;
+}
+
+.header-nav-list {
+  display: flex;
+  align-items: center;
+}
+
+.user-icon-button {
+  padding: 0px !important;
+}
+
+.user-icon {
+  color: #999c9e;
+}
+
+.user-list-item {
+  display: none;
+}
+
+@media only screen and (max-width: 375px) {
+  .dropdown-list-item {
+    display: none;
+  }
+
+  .user-list-item {
+    display: inline-block;
+    margin-right: 18px;
+  }
+}
+
+@media only screen and (max-width: 320px){
+.header{
+  justify-content: flex-start;
+}
+.header-nav-list{
+  padding: 0%;
+}
 }

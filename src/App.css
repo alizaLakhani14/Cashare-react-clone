@@ -7,12 +7,14 @@
 }
 
 .navbar {
+  transition: 0.4s ease;
   width: 15%;
   padding: 0 !important;
 }
 
 .navbarCollapse {
   width: 4.5%;
+  transition: 0.4s ease;
 }
 .aside-collapse {
   width: calc(100% - 4.5%);

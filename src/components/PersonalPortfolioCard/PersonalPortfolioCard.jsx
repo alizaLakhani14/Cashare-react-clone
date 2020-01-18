@@ -1,9 +1,6 @@
 import React from "react";
 import { Card, CardTitle, CardText, Table } from "reactstrap";
 import "./PersonalPortfolioCard.css";
-import Switch from "./Switch";
-import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
-import { faEdit, faTrashAlt } from "@fortawesome/free-solid-svg-icons";
 import PortfolioCollapseComponent from "./PortfolioCollapseComponent";
 
 const PersonalPortfolioCard = () => {

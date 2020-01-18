@@ -42,6 +42,9 @@ ul {
 .nav-dropdown-icon-collapse {
   font-size: 1em;
 }
+.nav-bar-collapse-hidden {
+  display: none;
+}
 
 @media only screen and (max-width: 1259px) {
   .nav-bar-dropdown-icon {
@@ -58,7 +61,7 @@ ul {
   .nav-bar-collapse {
     display: none;
   }
-  .nav-dropdown-icon{
+  .nav-dropdown-icon {
     margin: 0;
   }
 }

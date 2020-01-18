@@ -52,7 +52,14 @@ const NavBarDropdown = props => {
           </div>
         )}
       </div>
-      <Collapse isOpen={isOpen} className="nav-bar-collapse">
+      <Collapse
+        isOpen={isOpen}
+        className={
+          props.sideBarOpen === true
+            ? "nav-bar-collapse"
+            : "nav-bar-collapse-hidden"
+        }
+      >
         <ul className="nav-bar-dropdown-list">{props.children}</ul>
       </Collapse>
     </>
