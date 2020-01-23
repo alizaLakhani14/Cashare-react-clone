@@ -1,0 +1,101 @@
+.container-fluid {
+  max-height: 100% !important;
+  padding-top: 0;
+  padding-left: 0 !important;
+  padding-right: 0 !important;
+  display: flex;
+}
+
+.navbar {
+  transition: 0.4s ease;
+  width: 225.88px;
+  padding: 0 !important;
+}
+
+.navbarCollapse {
+  width: 73.6px;
+  transition: 0.4s ease;
+}
+.aside-collapse {
+  width: calc(100% - 73.6px);
+  background-color: #f3f3f4;
+}
+
+.aside {
+  width: calc(100% - 225.88px);
+  background-color: #f3f3f4;
+}
+
+.column {
+  width: 98%;
+  /* border: 1px solid black; */
+  margin-right: auto;
+  margin-left: auto;
+  display: flex;
+  align-items: center;
+  margin-top: 2em;
+  flex-direction: column;
+}
+
+.main {
+  margin-top: 1.5em !important;
+}
+
+.column2 {
+  display: flex;
+  flex-direction: column;
+}
+
+footer {
+  background-color: white;
+  width: 100%;
+  padding: 10px 0px 10px 20px;
+  margin-top: 1.5em;
+  color: rgb(103, 106, 108);
+  font-size: 13px;
+}
+
+@media only screen and (max-width: 1259px) and (min-width: 767px) {
+  .navbar {
+    width: 73.6px;
+  }
+  .aside {
+    width: calc(100% - 73.6px);
+  }
+}
+
+@media only screen and (max-width: 1024px) {
+  .navbarCollapse {
+    width: 0;
+  }
+  .aside-collapse {
+    width: 100%;
+  }
+}
+
+@media only screen and (max-width: 768px) {
+  .navbar {
+    width: 73.6px;
+  }
+  .aside {
+    width: calc(100% - 73.6px);
+  }
+}
+
+@media only screen and (max-width: 425px) {
+  .navbar {
+    width: 73.6px;
+  }
+  .aside {
+    width: calc(100% - 73.6px);
+  }
+}
+
+@media only screen and (max-width: 320px) {
+  .navbar {
+    width: 73.6px;
+  }
+  .aside {
+    width: calc(100% - 73.6px);
+  }
+}

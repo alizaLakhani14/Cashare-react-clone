@@ -1,4 +1,4 @@
-input[type="checkbox"] {
+.switch {
   width: 52px;
   height: 22px;
   background-color: #3a789b;
@@ -10,11 +10,11 @@ input[type="checkbox"] {
   border: 2px solid #3a789b;
 }
 
-input:checked[type="checkbox"] {
+.switch:checked[type="checkbox"] {
   background-color: white;
 }
 
-input[type="checkbox"]::before {
+.switch::before {
   position: absolute;
   content: "";
   left: 27px;
@@ -26,7 +26,7 @@ input[type="checkbox"]::before {
   border-radius: 3px;
 }
 
-input[type="checkbox"]:checked::before {
+.switch:checked::before {
   left: 0px;
   z-index: 100;
   border-right: 2px solid #3a789b;
@@ -44,15 +44,16 @@ input[type="checkbox"]:checked::before {
 
 .on {
   position: absolute;
-  left: 8px;
-  top: 2px;
+  left: 7px;
+  top: 3px;
   color: white;
+  font-size: 10px;
 }
 
 .off {
   position: absolute;
-  top: 0px;
+  top: 3px;
   left: 30px;
   color: rgb(103, 106, 108);
+  font-size: 10px;
 }
-

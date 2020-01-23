@@ -89,7 +89,7 @@ const AutoInvestFaq = props => {
       <CardTitle className="auto-invest-title">Auto-Invest-FAQ</CardTitle>
       <div style={{ padding: "1em" }}>
         {array.map(key => (
-          <CollapseComponent key={key} content={key} />
+          <CollapseComponent key={key.title} content={key} />
         ))}
       </div>
     </Card>

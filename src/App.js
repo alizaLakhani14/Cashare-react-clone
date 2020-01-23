@@ -1,52 +1,31 @@
-import React, { useState } from "react";
+import React from "react";
 import "./App.css";
-import { Container, Row, Col } from "reactstrap";
-import Header from "./components/Header/Header.jsx";
-import AutoInvestSection from "./components/AutoInvestSection/AutoInvestSection";
-import CreateAutoInvest from "./components/CreateAutoInvest/CreateAutoInvest";
-import AutoInvestFaq from "./components/Auto-Invest-Faq/AutoInvestFaq";
-import PersonalPortfolioCard from "./components/PersonalPortfolioCard/PersonalPortfolioCard";
-import SideNavBar from "./components/SideNavBar/SideNavBar";
-import Description from "./components/Description/Description";
+import { BrowserRouter, Switch, Route } from "react-router-dom";
+import AutoInvestComponent from "./components/AutoInvestComponent/AutoInvestComponent";
+import Dashboard from "./components/Dashboard/Dashboard";
+import CreditProjects from "./components/CreditProjects/CreditProjects";
+import LoanAgreements from "./components/Loan Agreements/LoanAgreements";
+import MyBids from "./components/My bids/MyBids";
+import Invoices from "./components/Invoices/Invoices";
+import Notifications from "./components/Notifications/Notifications";
+import Support from "./components/Support/Support";
 
 function App(props) {
-  const url = window.location.href;
-
-  const [sideBarOpen, setSideBarOpen] = React.useState(null);
-
-  const toggle = e => {
-    setSideBarOpen(e);
-  };
-
   return (
-    <Container className=".container-fluid main-container" fluid={true}>
-      <div className={sideBarOpen === true ? "navbar" : "navbarCollapse"}>
-        <SideNavBar url={url} sideBarOpen={sideBarOpen} />
+    <BrowserRouter>
+      <div className="App">
+        <Switch>
+          <Route exact path="/" component={AutoInvestComponent} />
+          <Route path="/dashboard" component={Dashboard} />
+          <Route path="/creditProjects" component={CreditProjects} />
+          <Route path="/loanAgreements" component={LoanAgreements} />
+          <Route path="/myBids" component={MyBids} />
+          <Route path="/invoices" component={Invoices} />
+          <Route path="/notifications" component={Notifications} />
+          <Route path="/support" component={Support} />
+        </Switch>
       </div>
-      <div className={sideBarOpen === true ? "aside" : "aside-collapse"}>
-        {" "}
-        <Header handleToggle={toggle} />
-        <AutoInvestSection />
-        <div className="column">
-          <Row style={{width:'100%'}}>
-            <Col md='12' sm='12' xs='12'>
-              <Description />
-            </Col>
-          </Row>
-
-          <Row style={{ marginTop: "2em", width: "100%" }}>
-            <Col md="6" sm="12" xs="12">
-              <CreateAutoInvest />
-              <PersonalPortfolioCard />
-            </Col>
-            <Col md="6" sm="12" x="12">
-              <AutoInvestFaq />
-            </Col>
-          </Row>
-        </div>
-        <footer>Copyright 2008-2020 Cashare AG</footer>
-      </div>
-    </Container>
+    </BrowserRouter>
   );
 }
 

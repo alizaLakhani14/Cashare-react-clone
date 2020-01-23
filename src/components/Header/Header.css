@@ -4,10 +4,24 @@
   padding: 0px 12px;
 }
 
+.header-button {
+  text-align: center;
+  padding: 0 !important;
+  width: 36px;
+  height: 29.8px !important;
+}
+.dropdown-button {
+  height: 29.8px;
+  font-size: 12px !important;
+}
+
 .header {
   display: flex;
   justify-content: space-between;
-  margin: 1em;
+  margin-right: 1em;
+  margin-left: 1em;
+  align-items: center;
+  height: 3.8rem;
 }
 
 .notification-button {
@@ -34,6 +48,7 @@
   font-weight: bold !important;
   text-decoration: none !important;
   padding: 0px !important;
+  font-size: 13px !important;
 }
 
 .logout-btn:hover {
@@ -56,7 +71,10 @@
 .user-list-item {
   display: none;
 }
-
+.header-nav {
+  height: 100%;
+  padding-top: 14px;
+}
 @media only screen and (max-width: 375px) {
   .dropdown-list-item {
     display: none;
@@ -68,11 +86,11 @@
   }
 }
 
-@media only screen and (max-width: 320px){
-.header{
-  justify-content: flex-start;
-}
-.header-nav-list{
-  padding: 0%;
-}
+@media only screen and (max-width: 320px) {
+  .header {
+    justify-content: flex-start;
+  }
+  .header-nav-list {
+    padding: 0%;
+  }
 }

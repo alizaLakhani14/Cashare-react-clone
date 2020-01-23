@@ -80,7 +80,7 @@ const PersonalPortfolioCard = () => {
           Your personal Auto-Invest Portfolios
         </CardTitle>
         <div className="portfolio-parent-div">
-          <Table striped responsive>
+          <Table striped responsive >
             <thead>
               <tr>
                 <td>Name of the portfolio</td>
@@ -89,9 +89,9 @@ const PersonalPortfolioCard = () => {
                 <td>Status</td>
               </tr>
             </thead>
-            <tbody>
+            <tbody style={{ width: "100%" }}>
               {portfolios.map(item => (
-                <PortfolioCollapseComponent key={item} content={item} />
+                <PortfolioCollapseComponent key={item.name} content={item} />
               ))}
             </tbody>
             <></>

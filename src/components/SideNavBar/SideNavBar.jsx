@@ -15,11 +15,10 @@ import {
   faChartBar
 } from "@fortawesome/free-solid-svg-icons";
 import NavBarDropdown from "./NavBarDropdown";
-import { NavLink as Abc } from "react-router-dom";
+import { NavLink as NavBarLink } from "react-router-dom";
 
 const SideNavBar = ({ sideBarOpen }) => {
-  const url = window.location.href;
-  console.log(sideBarOpen);
+  let url = window.location.pathname;
   return (
     <div className="nav-bar">
       <img
@@ -35,21 +34,23 @@ const SideNavBar = ({ sideBarOpen }) => {
       />
 
       <Nav vertical>
-        <NavItem className="nav-bar-item">
-          <span className="side-nav-bar-icon">
-            <FontAwesomeIcon icon={faThLarge} />
-          </span>
-          <span
-            className={
-              sideBarOpen === true
-                ? "side-bar-nav-item"
-                : "side-bar-nav-item-collapse"
-            }
-          >
-            {" "}
-            Dashboard
-          </span>
-        </NavItem>
+        <NavBarLink to="/dashboard" active={url === "/dasboard"}>
+          <NavItem className="nav-bar-item">
+            <span className="side-nav-bar-icon">
+              <FontAwesomeIcon icon={faThLarge} />
+            </span>
+            <span
+              className={
+                sideBarOpen === true
+                  ? "side-bar-nav-item"
+                  : "side-bar-nav-item-collapse"
+              }
+            >
+              {" "}
+              Dashboard
+            </span>
+          </NavItem>
+        </NavBarLink>
 
         <NavItem className="nav-bar-item">
           <NavBarDropdown
@@ -61,23 +62,24 @@ const SideNavBar = ({ sideBarOpen }) => {
             <li className="nav-bar-li">Secondary market</li>
           </NavBarDropdown>
         </NavItem>
+        <NavBarLink to='/'>
+          <NavItem className="nav-bar-item" active>
+            <span className="side-nav-bar-icon">
+              <FontAwesomeIcon icon={faChartBar} />
+            </span>
+            <span
+              className={
+                sideBarOpen === true
+                  ? "side-bar-nav-item"
+                  : "side-bar-nav-item-collapse"
+              }
+            >
+              Auto-Invest
+            </span>
+          </NavItem>
+        </NavBarLink>
 
-        <NavItem className="nav-bar-item" active={url === "/"}>
-          <span className="side-nav-bar-icon">
-            <FontAwesomeIcon icon={faChartBar} />
-          </span>
-          <span
-            className={
-              sideBarOpen === true
-                ? "side-bar-nav-item"
-                : "side-bar-nav-item-collapse"
-            }
-          >
-            Auto-Invest
-          </span>
-        </NavItem>
-
-        <NavItem className="nav-bar-item" active={url === "/loanAgreements"}>
+        <NavItem className="nav-bar-item">
           <NavBarDropdown
             icon={faNewspaper}
             name="Loan agreements"
@@ -88,23 +90,25 @@ const SideNavBar = ({ sideBarOpen }) => {
           </NavBarDropdown>
         </NavItem>
 
-        <NavItem className="nav-bar-item" active={url === "/myBids"}>
-          <span className="side-nav-bar-icon">
-            <FontAwesomeIcon icon={faChartLine} />
-          </span>
+        <NavBarLink to="/myBids">
+          <NavItem className="nav-bar-item">
+            <span className="side-nav-bar-icon">
+              <FontAwesomeIcon icon={faChartLine} />
+            </span>
 
-          <span
-            className={
-              sideBarOpen === true
-                ? "side-bar-nav-item"
-                : "side-bar-nav-item-collapse"
-            }
-          >
-            My bids
-          </span>
-        </NavItem>
+            <span
+              className={
+                sideBarOpen === true
+                  ? "side-bar-nav-item"
+                  : "side-bar-nav-item-collapse"
+              }
+            >
+              My bids
+            </span>
+          </NavItem>
+        </NavBarLink>
 
-        <NavItem className="nav-bar-item" active={url === "/invoices"}>
+        <NavItem className="nav-bar-item">
           <NavBarDropdown
             icon={faFile}
             name="Invoices"
@@ -115,35 +119,38 @@ const SideNavBar = ({ sideBarOpen }) => {
           </NavBarDropdown>
         </NavItem>
 
-        <NavItem className="nav-bar-item" active={url === "/notifications"}>
-          <span className="side-nav-bar-icon">
-            <FontAwesomeIcon icon={faBell} />
-          </span>
-          <span
-            className={
-              sideBarOpen === true
-                ? "side-bar-nav-item"
-                : "side-bar-nav-item-collapse"
-            }
-          >
-            Notifications
-          </span>
-        </NavItem>
-
-        <NavItem className="nav-bar-item" active={url === "/support"}>
-          <span className="side-nav-bar-icon">
-            <FontAwesomeIcon icon={faLifeRing} />
-          </span>
-          <span
-            className={
-              sideBarOpen === true
-                ? "side-bar-nav-item"
-                : "side-bar-nav-item-collapse"
-            }
-          >
-            Support
-          </span>
-        </NavItem>
+        <NavBarLink to="/notifications">
+          <NavItem className="nav-bar-item">
+            <span className="side-nav-bar-icon">
+              <FontAwesomeIcon icon={faBell} />
+            </span>
+            <span
+              className={
+                sideBarOpen === true
+                  ? "side-bar-nav-item"
+                  : "side-bar-nav-item-collapse"
+              }
+            >
+              Notifications
+            </span>
+          </NavItem>
+        </NavBarLink>
+        <NavBarLink to="/support">
+          <NavItem className="nav-bar-item">
+            <span className="side-nav-bar-icon">
+              <FontAwesomeIcon icon={faLifeRing} />
+            </span>
+            <span
+              className={
+                sideBarOpen === true
+                  ? "side-bar-nav-item"
+                  : "side-bar-nav-item-collapse"
+              }
+            >
+              Support
+            </span>
+          </NavItem>
+        </NavBarLink>
       </Nav>
     </div>
   );

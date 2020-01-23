@@ -1,0 +1,81 @@
+.MuiSlider-thumb {
+  border-radius: 0 !important;
+  width: 2px !important;
+  height: 18px !important;
+  background-color: #00779a !important;
+
+  position: absolute !important;
+}
+
+.MuiSlider-thumb:hover {
+  box-shadow: none !important;
+}
+.MuiSlider-track {
+  height: 12px !important;
+  background-color: #00779a !important;
+  /* left: -1% !important;
+  top: 40% !important; */
+}
+
+.MuiSlider-rail {
+  height: 12px !important ;
+  border-radius: 5px !important;
+  background-color: #e9e9e9 !important;
+}
+
+.MuiSlider-mark {
+  display: none;
+}
+
+.MuiSlider-markLabel {
+  color: rgb(153, 153, 153) !important;
+  font-size: 10px !important;
+  margin: 5px;
+}
+
+.MuiSlider-root {
+  position: relative !important;
+}
+
+.MuiSlider-thumb:nth-child(odd) {
+  margin-left: -2px !important;
+  top: 15px !important;
+}
+
+.MuiSlider-thumb:nth-child(even) {
+  margin-left: 0 !important;
+  top: 15px;
+}
+
+.PrivateValueLabel-offset-24 {
+  left: calc(-50% + -14px) !important;
+}
+.PrivateValueLabel-circle-25 {
+  border-radius: 0 !important;
+  background-color: #00779a !important;
+  transform: none !important;
+  /* text-align: center; */
+  height: 18px !important;
+  margin-top: 18px !important;
+  border-radius: 3px !important;
+  width: 25px !important;
+}
+
+.PrivateValueLabel-label-26 {
+  transform: none !important;
+  margin-left: auto;
+  margin-right: auto;
+  font-size: 10px !important;
+}
+
+.PrivateValueLabel-offset-24::after {
+  content: "";
+  background: #417292;
+  width: 7px;
+  height: 3px;
+  display: block;
+  position: absolute;
+  top: 36px;
+  left: 11px;
+  clip-path: polygon(0 0, 100% 0, 50% 100%, 50% 100%);
+}

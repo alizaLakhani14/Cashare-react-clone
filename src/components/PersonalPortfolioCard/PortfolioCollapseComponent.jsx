@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React from "react";
 import { Collapse } from "reactstrap";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import {
@@ -15,10 +15,16 @@ const PortfolioCollapseComponent = ({ content }) => {
   const toggle = () => {
     setIsOpen(!isOpen);
   };
+
+  // const handleClick = evt => {
+  //   evt.preventDefault();
+  //   toggle();
+  // };
+
   return (
     <>
-      <tr style={{ width: "100%" }}>
-        <td className="collapse-td" style={{ width: "25%" }}>
+      <tr style={{ width: "100%" }} onClick={() => {console.log("toggle run"); toggle()}}>
+        <td className="collapse-td" style={{ width: "38%" }}>
           <span className="portfolio-collapse-icon">
             {isOpen === true ? (
               <FontAwesomeIcon icon={faChevronUp} onClick={toggle} />
@@ -28,15 +34,14 @@ const PortfolioCollapseComponent = ({ content }) => {
           </span>
           {content.name}
         </td>
-        <td className="collapse-td" style={{ width: "20%" }}>
+        <td className="collapse-td" style={{ width: "19%" }}>
           {content.size}
         </td>
-        <td className="collapse-td" style={{ width: "25%" }}>
+        <td className="collapse-td" style={{ width: "20%" }}>
           {content.range}
         </td>
-        <td className="collapse-td collapse-td-switch" style={{ width: "35%" }}>
+        <td className="collapse-td collapse-td-switch" style={{ width: "33%" }}>
           <Switch />
-          {/* <span style={{ marginLeft: "8px", marginBottom: "7px" }}> */}
           <div style={{ display: "flex" }}>
             <span className="edit-icon-span">
               <FontAwesomeIcon icon={faEdit} />

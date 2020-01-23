@@ -25,9 +25,9 @@ const Header = ({ handleToggle }) => {
 
   return (
     <div className="header">
-      <div className="header-button">
+      <div>
         <Button
-          className="btn-secondary"
+          className="header-button"
           onClick={() => {
             handleToggle(!isOpen);
             toggle();
@@ -36,11 +36,14 @@ const Header = ({ handleToggle }) => {
           <FontAwesomeIcon icon={faBars} />
         </Button>
       </div>
+
       <nav className="header-nav">
         <ul className="header-nav-list">
           <li className="dropdown-list-item">
             <UncontrolledDropdown>
-              <DropdownToggle caret>c2091</DropdownToggle>
+              <DropdownToggle caret className="dropdown-button">
+                c2091
+              </DropdownToggle>
               <DropdownMenu right={true}>
                 <DropdownItem>User Data</DropdownItem>
                 <DropdownItem>Documents</DropdownItem>
